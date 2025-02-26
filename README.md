@@ -2,16 +2,16 @@
 Windows Utility to close programs for Gaming/Work mode.
 This script allows users to quickly close background programs that consume system resources, making more CPU and RAM available for gaming or other performance-intensive tasks.
 
-Features
+##Features
 Closes user-specified programs with a single script execution.
 Logs the closed programs for tracking.
 Works on Windows with PowerShell.
 
-Prerequisites
+##Prerequisites
 Windows 10/11
 PowerShell (Pre-installed on Windows)
 
-Steps:
+##Steps:
 - Clone the repository or manually download the script file (LockIn.ps1)
  Note: You can also download LockOut.ps1 to resume programs that were closed but that requires more tweaking on the user side.  LockIn.ps1 should work right away after editing app names.
 - Make folder called 'Scripts' in user folder: (or do it manually)
@@ -54,11 +54,11 @@ Click Apply, then OK.
 
 
 
-Troubleshooting
+*Troubleshooting*
 Error: "Execution policy prevents running scripts"
 Run Set-ExecutionPolicy Unrestricted -Scope CurrentUser in PowerShell (Admin).
 
-Programs not closing?
+*Programs not closing?*
 Check if the program names in $processesToClose match exactly as shown in Task Manager.
 
 Script doesn't run?
