@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg">
+
+    <!-- Timer display -->
+    <LinearLayout
+        android:id="@+id/timerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- Hours (hidden when 0) -->
+        <TextView
+            android:id="@+id/tvHours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00"
+            android:textSize="80sp"
+            android:textStyle="bold"
+            android:fontFamily="monospace"
+            android:textColor="@color/timer_text"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvColonHours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":"
+            android:textSize="80sp"
+            android:textStyle="bold"
+            android:fontFamily="monospace"
+            android:textColor="@color/timer_text"
+            android:visibility="gone"
+            android:paddingBottom="8dp" />
+
+        <TextView
+            android:id="@+id/tvMinutes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00"
+            android:textSize="80sp"
+            android:textStyle="bold"
+            android:fontFamily="monospace"
+            android:textColor="@color/timer_text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":"
+            android:textSize="80sp"
+            android:textStyle="bold"
+            android:fontFamily="monospace"
+            android:textColor="@color/timer_text"
+            android:paddingBottom="8dp" />
+
+        <TextView
+            android:id="@+id/tvSeconds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00"
+            android:textSize="80sp"
+            android:textStyle="bold"
+            android:fontFamily="monospace"
+            android:textColor="@color/timer_text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="."
+            android:textSize="48sp"
+            android:textStyle="bold"
+            android:fontFamily="monospace"
+            android:textColor="@color/timer_dim"
+            android:paddingBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tvCentiseconds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            android:fontFamily="monospace"
+            android:textColor="@color/timer_dim" />
+    </LinearLayout>
+
+    <!-- Start / Stop button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnStartStop"
+        android:layout_width="200dp"
+        android:layout_height="64dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="24dp"
+        android:text="@string/start"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        app:icon="@drawable/ic_play"
+        app:iconGravity="textStart"
+        app:iconSize="28dp"
+        app:cornerRadius="32dp"
+        android:backgroundTint="@color/accent"
+        xmlns:app="http://schemas.android.com/apk/res-auto" />
+
+    <!-- History label -->
+    <TextView
+        android:id="@+id/tvHistoryLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/history"
+        android:textSize="13sp"
+        android:textAllCaps="true"
+        android:letterSpacing="0.12"
+        android:textColor="@color/label"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="6dp" />
+
+    <!-- Empty hint -->
+    <TextView
+        android:id="@+id/tvEmptyHint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/empty_hint"
+        android:textSize="15sp"
+        android:textColor="@color/label"
+        android:gravity="center"
+        android:paddingTop="16dp"
+        android:visibility="gone" />
+
+    <!-- Segments list -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSegments"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingBottom="16dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        xmlns:app="http://schemas.android.com/apk/res-auto" />
+
+</LinearLayout>

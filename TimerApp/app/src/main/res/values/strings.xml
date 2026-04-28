@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Timer</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="save">Save</string>
+    <string name="discard">Discard</string>
+    <string name="mic">Mic</string>
+    <string name="delete">Delete</string>
+    <string name="history">History</string>
+    <string name="empty_hint">No sessions yet. Start the timer!</string>
+    <string name="dialog_title">Name this session</string>
+    <string name="dialog_duration_label">Duration: %1$s</string>
+    <string name="segment_title_hint">What were you doing?</string>
+    <string name="mic_prompt">Say what you were doing…</string>
+    <string name="speech_not_available">Speech recognition not available</string>
+</resources>
